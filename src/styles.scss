@@ -7,10 +7,16 @@
 
 $black: #000000;
 $white: #ffffff;
-$orange: #FF9C00;
-$lilac: #9C9CFF;
-$salmon: #D06468;
-$cream: #FFCC99;
+
+$lcars-orange: #FF9900;
+$lcars-purple: #CC99CC;
+$lcars-blue: #9999CC;
+$lcars-red: #CC6666;
+$lcars-cream: #FFCC99;
+$lcars-indigo: #9999FF;
+$lcars-soft-orange: #FF9966;
+$lcars-salmon: #CC6699;
+
 $text: 'Saira Extra Condensed', sans-serif;
 
 html {
@@ -22,7 +28,7 @@ body {
   margin: 0;
   height: 100%;
   background: $black;
-  color: $orange;
+  color: $lcars-orange;
   font-family: $text;
   font-weight: 600;
   display: flex;
@@ -63,7 +69,7 @@ button {
   font-family: $text;
   position: relative;
   color: $black;
-  background: $orange;
+  background: $lcars-orange;
   cursor: pointer;
   &:after {
     display: block;
@@ -96,30 +102,29 @@ button {
   }
 }
 @keyframes button-pulse {
-  0%{ background: $orange; }
-  25%{ background: $orange; }
-  25.1%{ background: $lilac; }
-  50%{ background: $lilac; }
-  50.1%{ background: $salmon; }
-  75%{ background: $salmon; }
-  75.1%{ background: $cream; }
-  100%{ background: $cream; }
+  0%{ background: $lcars-orange; }
+  25%{ background: $lcars-orange; }
+  25.1%{ background: $lcars-purple; }
+  50%{ background: $lcars-purple; }
+  50.1%{ background: $lcars-salmon; }
+  75%{ background: $lcars-salmon; }
+  75.1%{ background: $lcars-cream; }
+  100%{ background: $lcars-cream; }
 }
 
 .down-wrapper {
-  background: $orange;
-  background-image: linear-gradient(
-      $orange 0%,
-      $orange 40%,
+  background: linear-gradient(
+      $lcars-orange 0%,
+      $lcars-orange 40%,
       $black 40%,
       $black 42%,
-      $lilac 42%,
-      $lilac 100%
+      $lcars-purple 42%,
+      $lcars-purple 100%
   );
   box-shadow:
-    inset $orange -10em 0em 0 0,
+    inset $lcars-orange -10em 0em 0 0,
     inset $black -10.3em 0em 0 0,
-    inset $salmon -20em 0em 0 0,
+    inset $lcars-salmon -20em 0em 0 0,
     inset $black -20.3em 0em 0 0;
   padding-left: 10rem;
   padding-bottom: 1em;
@@ -155,7 +160,7 @@ button {
 .up-wrapper {
   display: flex;
   flex-flow: column;
-  background: $orange;
+  background: $lcars-orange;
   height: 100%;
   // background-image: linear-gradient(
   //     $orange 0,
@@ -166,9 +171,9 @@ button {
   //     $lilac 100%
   // );
   box-shadow:
-    inset $orange -5em 10em 0 0,
+    inset $lcars-orange -5em 10em 0 0,
     inset $black -5em 10.3em 0 0,
-    inset $salmon -5em 20em 0 0,
+    inset $lcars-salmon -5em 20em 0 0,
     inset $black -5em 20.3em 0 0;
   padding-left: 10rem;
   padding-top: 1em;
