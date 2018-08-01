@@ -2,15 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { CurrentSystemComponent } from './components/current-system/current-system.component';
+import {CurrentSystemService} from "./services/current-system-service";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CurrentSystemComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CurrentSystemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
