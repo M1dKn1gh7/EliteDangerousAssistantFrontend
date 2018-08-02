@@ -6,12 +6,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CurrentSystemService {
 
-  starImageUrl = 'https://www.edsm.net/img/bodies/stars/2.png';
-
   constructor(  private http: HttpClient) { }
 
-  getStarImage(spectralId: number) {
-    //call webservice here (or server to call websercvie
-    return this.http.get(this.starImageUrl);
+  getCurrentSystem() {
+    return this.http.get("");
   }
 }
