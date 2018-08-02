@@ -8,8 +8,6 @@ import { CurrentSystemService } from "../../services/current-system-service";
 })
 export class CurrentSystemComponent implements OnInit {
 
-
-  currentStarImageUrl: any;
   currentSystem: any;
 
   constructor(private currentSystemService: CurrentSystemService) {
@@ -17,6 +15,9 @@ export class CurrentSystemComponent implements OnInit {
 
   ngOnInit() {
     this.currentSystem = this.currentSystemService.getCurrentSystem()
+      .subscribe(data =>{
+        this.currentSystem = data;
+      })
   }
 
 }
