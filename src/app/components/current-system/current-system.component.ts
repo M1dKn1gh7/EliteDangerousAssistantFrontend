@@ -11,7 +11,7 @@ export class CurrentSystemComponent implements OnInit {
   currentSystem = {name: 'Maia', spectralId: 2, spectralClass: 'B Blue-White'};
 
   constructor(private currentSystemService: CurrentSystemService) {
-    currentSystemService.getStarImage(this.currentSystem.spectralId);
+    console.log(currentSystemService.getStarImage(this.currentSystem.spectralId));
   }
 
   ngOnInit() {
